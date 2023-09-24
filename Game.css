@@ -1,0 +1,270 @@
+:root{scroll-behavior: smooth;}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    user-select: none;
+}
+body::-webkit-scrollbar{display: none;}
+.nav{
+    /* border: 1px solid white; */
+    display: flex;
+    top: 0%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 1rem;
+    background-color: rgb(46, 46, 46);
+    position: fixed;
+    /* overflow: hidden; */
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(46, 46, 46);
+}
+a:hover{color: orange;}
+.logo{
+background-color: rgb(46, 46, 46);
+font-size: 2rem;
+color: orange;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(46, 46, 46);
+}
+.menu li:hover{
+    color: orange;
+    cursor: pointer;
+}
+.menu > li{
+    margin: 0 1rem;
+    overflow: hidden;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-button-container{
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+}
+.menu-button,
+.menu-button::before, .menu-button::after{
+    display: block;
+    background-color: orange;
+    position: absolute;
+    height: 6px;
+    width: 32px;
+    border-radius: 3px;
+}
+.menu-button::before{
+    content: '';
+    margin-top: -8px;
+}
+.menu-button::after{
+    content: '';
+    margin-top: 8px;
+}
+#menu-toggle:checked + .menu-button-container .menu-button::before{
+    margin-top: 0px;
+    transform: rotate(180deg);
+}
+#menu-toggle:checked + .menu-button-container .menu-button{
+    background: orange;
+}
+#menu-toggle:checked + .menu-button-container .menu-button::after{
+    margin-top: 0px;
+    transform: rotate(-180deg);
+}
+/* Making the navbar responsive by CSS Media Queries */
+@media (max-width: 700px) 
+{
+    .logo{font-size: 20px;}
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 100px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid rgb(46, 46, 46);
+      height: 2.5em;
+      padding: 0.5em;
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: rgb(46, 46, 46);
+    }
+    a{
+        background-color: rgb(46, 46, 46);
+    }
+} 
+/* NAVBAR END */
+
+/* HOME PAGE */
+#home{
+    /* border: 1px solid white; */
+    height: 84vh;
+    width: 100%;
+    margin-top: 110px;
+    display: inline-block;
+}
+.hmhead{
+    /* border: 1px solid blue; */
+    text-align: center;
+    margin-top: 30vh;
+    font-size: 10rem;
+    color: rgba(44, 44, 44, 0.85);
+}
+.first{
+    /* border: 1px solid white; */
+    margin-top: -30vh;
+    font-size: 3rem;
+    text-align: center;
+    color: orange;
+}
+.sec{
+    /* border: 1px solid white; */
+    text-align: center;
+    font-size: 5rem;
+}
+/*ABOUT PAGE*/
+#about{
+    /* border: 1px solid white; */
+    height: 84vh;
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+.abfirst{
+    margin-top: -40vh;
+    font-size: 3rem;
+    text-align: center;
+    color: orange;
+}
+.para{
+    /* border: 1px solid white; */
+    margin: 5vh;
+    padding: 10px;
+    line-height: 30px;
+    text-align: justify;
+}
+/* AUTHOR PAGE */
+#author{
+    /* border: 1px solid white; */
+    height: 84vh;
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+.aufs{
+    margin-top: -50vh;
+    font-size: 3rem;
+    text-align: center;
+    color: orange;
+}
+/* WORK */
+#work{
+    /* border: 1px solid white; */
+    height: 84vh;
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+.wrk{
+    margin-top: -40vh;
+    font-size: 3rem;
+    text-align: center;
+    color: orange;
+}
+.boxbox{
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-left: 40%;
+    width: 20%;
+    height: 60%;
+}
+.lnk{
+    font-size: 1.5rem;
+    background-color: rgba(128, 128, 128, 0);
+}
+@media (max-width: 700px) {
+    .hmhead{
+        font-size: 5rem;
+    }
+    .first{
+        margin-top: -20vh;
+        font-size: 1.5rem;
+    }
+    .sec{
+        font-size: 2rem;
+    }
+    #about{
+        height: 130vh;
+    }
+    .abfirst{
+        margin-top: -70vh;
+        font-size: 1.5rem;
+    }
+    .phmhead{
+        margin-top: 60vh;
+        font-size: 5rem;
+    }
+    .para{
+        /* border: 1px solid white; */
+        margin: 5vh;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .aufs{
+        margin-top: -30vh;
+        font-size: 1.5rem;
+    }
+    .wrk{
+        font-size: 1.5rem;   
+    }
+    .boxbox{
+        width: 40%;  
+        margin-left: 30%;
+    }
+    .lnk{font-size: 20px;}
+}

@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url("bg.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scr{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 25px;;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+}
+#HighScore{
+    position: absolute;
+    top: 9px;
+    left: 200px;
+    font-size: 25px;;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+}
+#board{
+    width: 100vmin;
+    height: 90vmin;
+    display: grid;
+    grid-template-rows: repeat(30, 1fr);
+    grid-template-columns: repeat(30, 1fr);
+    background-color: rgba(53, 53, 53);
+    border: 2px solid rgb(24, 24, 24);
+    border-radius: 10px;
+}
+.shead{
+    background-color: red;
+    border-radius: 50%;
+    transform: scale(1.02);
+
+}
+.snake{
+    background-color: orange;
+    border: .25vmin solid white;
+    border-radius: 50%;
+}
+.sfood{
+    background-color: rgb(179, 0, 255);
+    border-radius: 50%;
+    border: .25vmin solid black;
+}
+@media screen and (max-width: 2560px) {
+    body {
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #scr{
+        top: 5%;
+        right: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #HighScore{
+        top: 5%;
+        left: 50px;
+        font-size: 30px;;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #board {
+        width: 600px;
+        height: 600px;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #scr{
+        top: 5%;
+        right: 50px;
+        font-size: 22px;;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #HighScore{
+        top: 5%;
+        left: 50px;
+        font-size: 22px;;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    
+    #board {
+        width: 500px;
+        height: 450px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #scr{
+        top: 5%;
+        right: 50px;
+        font-size: 25px;;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #HighScore{
+        top: 5%;
+        left: 50px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #board {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 425px ){
+    body {
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #scr{
+        top: 5%;
+        right: 50px;
+        font-size: 15px;;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #HighScore{
+        top: 5%;
+        left: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #board {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 320px ){
+    body {
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #scr{
+        top: 5%;
+        right: 50px;
+        font-size: 15px;;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #HighScore{
+        top: 5%;
+        left: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+    }
+    #board {
+        width: 250px;
+        height: 250px;
+    }
+}
